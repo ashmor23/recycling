@@ -1,0 +1,14 @@
+# Ash Morrison
+# FizzBuzz Challenge for Module 1
+
+numlist = range(1, 16)
+
+def main():
+    for i in numlist:
+        if type(i/3) and type(i/5) == int:
+            print("FizzBuzz")
+            continue
+        if type(i/3) == int:
+            print("Fizz")
+        if type(i/5) == int:
+            print("Buzz")
