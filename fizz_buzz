@@ -1,14 +1,22 @@
-# Ash Morrison
-# FizzBuzz Challenge for Module 1
+""" FizzBuzz Challenge for Module 1. Name: Ash Morrison """
 
-numlist = range(1, 16)
+numlist = range(1, 101)
 
-def main():
+def buzzer():
+    """This function identifies numbers divisible by 3 and/or 5."""
     for i in numlist:
-        if type(i/3) and type(i/5) == int:
+        bythree = lambda i: (i%3 == 0)
+        byfive = lambda i: (i%5 == 0)
+        if bythree(i) and byfive(i) is True:
             print("FizzBuzz")
             continue
-        if type(i/3) == int:
+        elif bythree(i) is True:
             print("Fizz")
-        if type(i/5) == int:
+            continue
+        elif byfive(i) is True:
             print("Buzz")
+            continue
+        else:
+            print(i)
+
+buzzer()
